@@ -1,0 +1,18 @@
+= form_tag('/signup', :id => 'email_submit') do			
+	%p#important
+		The site is currently being developed.<br /> Please enter your information below and<br /> we will let you know when it is up and running. Thank You!
+	- unless flash[:error].nil?
+		#errors
+			- flash[:error].each_with_index do |msg, i|
+				%ul
+					%li= msg
+
+	
+	%div	
+		= label_tag 'first_name', 'First Name', :class => 'label'
+		= text_field_tag 'first_name', nil,  :id => 'first_name'
+	%div
+		= label_tag 'email', 'Email', :class => 'label'
+		= text_field_tag 'email', nil, :id => 'email'
+	%span#example eg. myemail@example.com
+	= submit_tag 'Submit', :id => 'submit'

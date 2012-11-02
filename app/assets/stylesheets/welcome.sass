@@ -1,0 +1,267 @@
+@font-face
+	font-family: "Novecentowide-Bold"
+	src: url(font-path('Synthview-Novecentowide-Bold.otf')) format('opentype')
+	src: url(font-path('synthview_-_novecentowide-bold-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-bold-webfont.svg'))
+	src: url(font-path('synthview_-_novecentowide-bold-webfont.ttf')) format('truetype')
+	src: url(font-path('synthview_-_novecentowide-bold-webfont.woff'))
+
+@font-face
+	font-family: "Novecentowide-Book"
+	src: url(font-path('Synthview-Novecentowide-Book.otf'))
+	src: url(font-path('synthview_-_novecentowide-book-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-book-webfont.svg'))
+	src: url(font-path('synthview_-_novecentowide-book-webfont.ttf'))
+	src: url(font-path('synthview_-_novecentowide-book-webfont.woff'))
+
+@font-face
+	font-family: "Novecentowide-DemiBold"
+	src: url(font-path('Synthview-Novecentowide-DemiBold.otf'))
+	src: url(font-path('synthview_-_novecentowide-demibold-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-demibold-webfont.svg'))
+	src: url(font-path('synthview_-_novecentowide-demibold-webfont.ttf'))
+	src: url(font-path('synthview_-_novecentowide-demibold-webfont.woff'))
+
+@font-face
+	font-family: "Novecentowide-Light"
+	src: url(font-path('Synthview-Novecentowide-Light.otf'))
+	src: url(font-path('synthview_-_novecentowide-light-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-light-webfont.svg'))
+	src: url(font-path('synthview_-_novecentowide-light-webfont.ttf'))
+	src: url(font-path('synthview_-_novecentowide-light-webfont.woff'))
+
+@font-face
+	font-family: "Novecentowide-Medium"
+	src: url(font-path('Synthview-Novecentowide-Medium.otf'))
+	src: url(font-path('synthview_-_novecentowide-medium-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-medium-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-medium-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-medium-webfont.eot'))
+
+@font-face
+	font-family: "Novecentowide-Normal"
+	src: url(font-path('Synthview-Novecentowide-Normal.otf'))
+	src: url(font-path('synthview_-_novecentowide-normal-webfont.eot'))
+	src: url(font-path('synthview_-_novecentowide-normal-webfont.svg'))
+	src: url(font-path('synthview_-_novecentowide-normal-webfont.ttf'))
+	src: url(font-path('synthview_-_novecentowide-normal-webfont.woff'))
+
+// Variable declarations
+$text_box_width: 300px
+$green: rgb( 31, 115, 60)
+$light_green: #84BF04
+$orange: #F2B705
+$dark_orange: #D98236
+$red: #D93D3D
+$brown: #735702
+$light_brown: #b28704
+
+$i: 1
+$pics: pic_1 pic_2 pic_3 pic_4 pic_5 pic_6 pic_7 pic_8
+@mixin pic_format($height)
+	@each $pic in $pics
+		##{$pic}
+			height: $height
+			width: auto
+	
+	
+
+body
+	background: $green
+
+@include pic_format(200px)
+
+#container 
+	width: 90%
+	height: 400px
+	margin: 0 auto
+	h1
+		font-family: Novecentowide-DemiBold
+		color: black
+		margin-left: 5%
+		text-shadow: 5px 5px 5px black
+	h3
+		font-family: Novecentowide-Light
+		color: black
+		margin-left: 10%
+		text-shadow: 5px 5px 5px black
+
+#topnav
+	font-family: Novecentowide-Book
+	float: right
+	list-style: none
+	margin-top: -10px
+	li
+		display: inline
+		margin: 0 5px
+		a
+			color: black
+			text-decoration: none
+			font-size: 13px
+			position: relative
+			top: 3px
+			margin: 0
+			&:hover
+				text-decoration: overline underline
+
+#base
+	position: absolute
+	bottom: 10px
+
+#pic1,
+#pic2
+	float: left
+
+#email_submit
+	margin: 0 0 0 0
+	float: right
+	// border: solid
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	box-shadow: 1px 1px 5px 
+	position: relative
+	background: darken(#a7bd9d, 10%)
+	div
+		margin-right: 7px
+	&:first-child
+		margin-top: 5px
+
+p#important
+	font-family: Novecentowide-Medium
+	font-size: 17px
+	color: brown
+	text-align: center
+	margin-right: 3px
+	margin-left: 3px
+
+#first_name
+	font-family: Novecentowide-Normal
+	width: $text_box_width
+	margin-bottom: 3px
+	float: right
+	font-size: 12px
+	background: #a7bd9d
+	border-style: none
+	border-color: #a7bd9d
+	margin: 5px 0 5px 15px
+	position: relative
+	&:focus
+		border-style: none
+		border-color: #a7bd9d
+
+#email
+	font-family:	Novecentowide-Normal
+	width: $text_box_width
+	margin-bottom: 3px
+	float: right
+	font-size: 12px
+	background: #a7bd9d
+	border-style: none
+	margin: 5px 0 5px 45px
+	&:focus
+		border-style: none
+		border-color: #a7bd9d
+
+.label
+	display: block
+	font-family: Novecentowide-DemiBold
+	font-size: 15px
+	float: left
+	margin-top: 5px
+	margin-left: 5px
+	// position
+
+#submit
+	width: $text_box_width
+	position: relative
+	margin: 5px 7px 5px 0
+	border: 1px solid rgb(189,180,173)
+	border-top-right-radius: 2px
+	border-top-left-radius: 2px
+	border-bottom-right-radius: 2px
+	border-bottom-left-radius: 2px
+	font-family: Novecentowide-DemiBold
+	font-size: 14px
+	letter-spacing: 2px
+	text-decoration: none
+	float: right
+	background: #a2e8b6
+	background: -ms-linear-gradient(#a2e8b6, #a7bd9d)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a2e8b6', endColorstr='#a7bd9d')
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#a2e8b6', endColorstr='#a7bd9d')"
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#a2e8b6), to(#a7bd9d))
+	background: -moz-linear-gradient(#a2e8b6, #a7bd9d)
+	background: -o-linear-gradient(#a2e8b6, #a7bd9d)
+	background: linear-gradient(top center, #a2e8b6, #a7bd9d)
+
+	&:hover
+		cursor: pointer
+
+	&:active
+		border: 1px solid rgb(189,180,173)
+		border-top-right-radius: 2px
+		border-top-left-radius: 2px
+		border-bottom-right-radius: 2px
+		border-bottom-left-radius: 2px
+		font: 12pt, Arial, Helvetica, sans-serif
+		text-decoration: none
+		background: -ms-linear-gradient(#a7bd9d, #a2e8b6)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7bd9d', endColorstr='#a2e8b6')
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7bd9d', endColorstr='#a2e8b6')"
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#a7bd9d), to(#a2e8b6))
+		background: -moz-linear-gradient(#a7bd9d, #a2e8b6)
+		background: -o-linear-gradient(#a7bd9d, #a2e8b6)
+		background: linear-gradient(top center, #a7bd9d, #a2e8b6)
+
+img
+	margin: 2px
+	opacity: .6
+	&:hover
+		opacity: 1
+	.left
+		float: left
+		display: block
+
+	.right
+		float: left
+
+#copy
+	font-family: Novecentowide-DemiBold
+	color: $light_brown
+	font-size: 12px
+	margin-left: 50px
+
+#created
+
+	p
+		display: inline
+		font-size: 13px
+		margin-left: 5px
+		font-family: Novecentowide-Medium
+	a
+		font-family: Novecentowide-Bold
+		text-decoration: line-through
+		color: black
+		font-size: 12px
+		&:hover
+			color: $light_brown
+		&:active
+			color: pink
+
+#errors
+	float: right
+	text-decoration: none
+	color: red
+	li
+		list-style: none
+		font-size: 14px
+
+#success
+	
+#example
+	float: right
+	font-size: 12px
+	font-family: Novecentowide-Light
+	position: relative
+
