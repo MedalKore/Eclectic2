@@ -73,19 +73,54 @@ body
 
 #container 
 	width: 90%
-	height: 400px
+	height: 800px
 	margin: 0 auto
-	h1
+
+h3
+	margin-left: 10%
+	margin-top: -2.7%
+	background: darken(#a7bd9d, 10%)
+	width: 320px
+	height: 30px
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	-webkit-box-shadow: 2px 2px 3px black
+	-moz-box-shadow: 2px 2px 3px black
+	box-shadow: 2px 2px 3px black
+	padding: 1px 0 0 0
+
+	p
+		font-size: 17px
+		font-family: Novecentowide-Light
+		color: black
+		position: relative
+		text-align: center
+		margin: 5px 0 0 0
+
+
+#home
+	background: darken(#a7bd9d, 10%)
+	width: 430px
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	-webkit-box-shadow: 2px 2px 3px black
+	-moz-box-shadow: 2px 2px 3px black
+	box-shadow: 2px 2px 3px black
+	position: relative
+	z-index: 1
+	a
+		color: black
+		text-decoration: none
 		font-family: Novecentowide-DemiBold
 		color: black
 		margin-left: 5%
-		text-shadow: 5px 5px 5px black
-	h3
-		font-family: Novecentowide-Light
-		color: black
-		margin-left: 10%
-		text-shadow: 5px 5px 5px black
+		// text-shadow: 5px 5px 5px black
 
+		&:focus
+			text-decoration: none
+			color: black
 #topnav
 	font-family: Novecentowide-Book
 	float: right
@@ -105,17 +140,15 @@ body
 				text-decoration: overline underline
 
 #base
-	position: absolute
-	bottom: 10px
-
-#pic1,
-#pic2
-	float: left
+	position: relative
+	margin-top: 10px
+	float: right
 
 #email_submit
 	margin: 0 0 0 0
 	float: right
-	// border: solid
+	height: 170px
+	width: 465px
 	-webkit-border-radius: 5px
 	-moz-border-radius: 5px
 	border-radius: 5px
@@ -135,16 +168,18 @@ p#important
 	margin-right: 3px
 	margin-left: 3px
 
+#inputcontain
+	position: relative
+
 #first_name
 	font-family: Novecentowide-Normal
 	width: $text_box_width
-	margin-bottom: 3px
 	float: right
 	font-size: 12px
 	background: #a7bd9d
 	border-style: none
 	border-color: #a7bd9d
-	margin: 5px 0 5px 15px
+	margin: -17px 0 5px 0px
 	position: relative
 	&:focus
 		border-style: none
@@ -153,12 +188,11 @@ p#important
 #email
 	font-family:	Novecentowide-Normal
 	width: $text_box_width
-	margin-bottom: 3px
 	float: right
 	font-size: 12px
 	background: #a7bd9d
 	border-style: none
-	margin: 5px 0 5px 45px
+	margin: -12px 0 5px 0px
 	&:focus
 		border-style: none
 		border-color: #a7bd9d
@@ -166,16 +200,14 @@ p#important
 .label
 	display: block
 	font-family: Novecentowide-DemiBold
-	font-size: 15px
-	float: left
-	margin-top: 5px
+	font-size: 12px
 	margin-left: 5px
-	// position
+	margin-top: 5px
 
 #submit
 	width: $text_box_width
 	position: relative
-	margin: 5px 7px 5px 0
+	margin: -8px 7px 5px 0
 	border: 1px solid rgb(189,180,173)
 	border-top-right-radius: 2px
 	border-top-left-radius: 2px
@@ -214,18 +246,6 @@ p#important
 		background: -o-linear-gradient(#a7bd9d, #a2e8b6)
 		background: linear-gradient(top center, #a7bd9d, #a2e8b6)
 
-img
-	margin: 2px
-	opacity: .6
-	&:hover
-		opacity: 1
-	.left
-		float: left
-		display: block
-
-	.right
-		float: left
-
 #copy
 	font-family: Novecentowide-DemiBold
 	color: $light_brown
@@ -250,18 +270,83 @@ img
 			color: pink
 
 #errors
-	float: right
 	text-decoration: none
 	color: red
+	margin: 0px 0 0 0
 	li
 		list-style: none
 		font-size: 14px
+		margin: -5px 0 0 0
 
 #success
 	
-#example
-	float: right
-	font-size: 12px
-	font-family: Novecentowide-Light
-	position: relative
 
+#example
+	font-size: 13px
+	font-family: serif
+	letter-spacing: 0
+	margin-left: 3px
+
+//Thumba
+.ThumbaGallery 
+	position: relative
+	width: 630px
+	margin-top: 20px	
+
+.thumba
+	list-style: none
+	padding: 0
+	margin: 0
+	width: 630px
+	height: 500px
+	display: table
+	background: #2b2b2b
+	position: relative
+	li
+		margin: 10px
+		display: inline-table
+		vertical-align: middle
+		z-index: 9
+		a
+			display: block
+
+.wrapThumba 
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	border-width: 2px
+	border-color: darken(#a7bd9d, 10%)
+	border-style: solid
+	background-color: transparent
+	display: none
+	cursor: pointer
+	box-shadow: 4px 4px 4px #1d1d1d	
+	
+/** Overlay lightbox **/
+.ThumbaLightbox_overlay
+	background-color: #000
+	opacity: 0.5
+	-ms-filter: "alpha(opacity=50)" /* IE 8 */ 
+	filter: alpha(opacity=50)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	z-index: 9998
+	
+	/** Main container lightbox **/
+.ThumbaLightbox
+	position: absolute
+	z-index: 9999
+	overflow: hidden
+	border: 1px solid #000
+	
+	/** Legend Img **/
+.ThumbaLightboxLegend
+	background-color: #000
+	color: #fff
+	font-size: 12px
+	font-style: italic

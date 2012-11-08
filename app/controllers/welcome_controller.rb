@@ -1,13 +1,13 @@
 class WelcomeController < ApplicationController
   
 
+
   def index
   	@title = 'Welcome'
 
   end
 
   def signup
-  	@title = 'Thank You'
   	@first_name = params[:first_name]
   	@email = params[:email]
   	@prospect = Prospect.create(:firstname => @first_name, :email => @email)
@@ -25,6 +25,7 @@ class WelcomeController < ApplicationController
   end
 
   def error
+    @title = 'Welcome'
     render 'layouts/errorpage'
     
   end

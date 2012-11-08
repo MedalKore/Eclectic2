@@ -1,18 +1,45 @@
-= form_tag('/signup', :id => 'email_submit') do			
-	%p#important
-		The site is currently being developed.<br /> Please enter your information below and<br /> we will let you know when it is up and running. Thank You!
-	- unless flash[:error].nil?
+= form_tag('http://www.listwire.com/form/process.php', :id => 'email_submit') do			
+	- unless flash[:error].nil?	
 		#errors
-			- flash[:error].each_with_index do |msg, i|
+			-flash[:error].each_with_index do |msg, i|
 				%ul
 					%li= msg
+		<input type="hidden" name="bot_action" value="form_subscribe">
+		<input type="hidden" name="bot_track_code" value="">
+		<input type="hidden" name="bot_pass_standard" value="1">
+		<input type="hidden" name="bot_pass_custom" value="0">
+		<input type="hidden" name="bot_account" value="e2landingpage">
+		<input type="hidden" name="bot_redirect" value="http://eclecticexpressionsonline.com/thankyou">
+		<input type="hidden" name="bot_web_form_id" value="42747">
+		#inputcontain	
+			%div	
+				= label_tag 'first_name', 'First Name', :class => 'label'
+				= text_field_tag 'fullname', nil,  :id => 'first_name'
+			%div
+				= label_tag 'email', 'Email', :class => 'label'
+				= text_field_tag 'email', nil, :id => 'email'
+			%span#example eg. myemail@example.com
+			= submit_tag 'Submit', :id => 'submit'
 
-	
-	%div	
-		= label_tag 'first_name', 'First Name', :class => 'label'
-		= text_field_tag 'first_name', nil,  :id => 'first_name'
-	%div
-		= label_tag 'email', 'Email', :class => 'label'
-		= text_field_tag 'email', nil, :id => 'email'
-	%span#example eg. myemail@example.com
-	= submit_tag 'Submit', :id => 'submit'
+	-else
+		%p#important
+			The site is currently being developed.<br /> Please enter your information below and<br /> we will let you know when it is up and running. Thank You!
+		
+		<input type="hidden" name="bot_action" value="form_subscribe">
+		<input type="hidden" name="bot_track_code" value="">
+		<input type="hidden" name="bot_pass_standard" value="1">
+		<input type="hidden" name="bot_pass_custom" value="0">
+		<input type="hidden" name="bot_account" value="e2landingpage">
+		<input type="hidden" name="bot_redirect" value="http://localhost:3000/thankyou">
+		<input type="hidden" name="bot_web_form_id" value="42747">
+
+		#inputcontain	
+			%div	
+				= label_tag 'first_name', 'First Name', :class => 'label'
+				= text_field_tag 'fullname', nil,  :id => 'first_name'
+			%div
+				= label_tag 'email', 'Email', :class => 'label'
+				= text_field_tag 'email', nil, :id => 'email'
+			%span#example eg. myemail@example.com
+			= submit_tag 'Submit', :id => 'submit'
+

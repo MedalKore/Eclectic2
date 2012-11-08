@@ -1,11 +1,18 @@
-#pic1	
-	= image_tag 'pics/IMG_6645.JPG', :id => 'pic_1', :class => 'left'
-	= image_tag 'pics/IMG_6685.JPG', :id => 'pic_2', :class => 'left'
-	= image_tag 'pics/IMG_6686.JPG', :id => 'pic_3', :class => 'left'
-	= image_tag 'pics/IMG_6687.JPG', :id => 'pic_4', :class => 'left'
-#pic2	
-	= image_tag 'pics/IMG_6688.JPG', :id => 'pic_5', :class => 'right'
-	= image_tag 'pics/IMG_6689.JPG', :id => 'pic_6', :class => 'right'
-	= image_tag 'pics/IMG_6692.JPG', :id => 'pic_7', :class => 'right'
-	= image_tag 'pics/IMG_6693.JPG', :id => 'pic_8', :class => 'right'
-
+%div.ThumbaGallery	
+	%ul#pic1.thumba
+		%li
+			= link_to image_tag( 'pics/IMG_6645.JPG', :id => 'pic_1'), image_path('pics/IMG_6645.JPG'), :class => 'thumba_default'
+		%li
+			= link_to image_tag( 'pics/IMG_6685.JPG', :id => 'pic_2'), image_path('pics/IMG_6685.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6686.JPG', :id => 'pic_3'), image_path('pics/IMG_6686.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6687.JPG', :id => 'pic_4'), image_path('pics/IMG_6687.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6688.JPG', :id => 'pic_5'), image_path('pics/IMG_6688.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6689.JPG', :id => 'pic_6'), image_path('pics/IMG_6689.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6692.JPG', :id => 'pic_7'), image_path('pics/IMG_6692.JPG')
+		%li
+			= link_to image_tag( 'pics/IMG_6693.JPG', :id => 'pic_8'), image_path('pics/IMG_6693.JPG')
