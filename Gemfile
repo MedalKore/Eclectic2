@@ -7,7 +7,7 @@ gem 'haml-rails'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'gibbon'
+gem 'gibbon', '0.4.1'
 
 # Gems used only for assets and not required
 # in production environments by default.

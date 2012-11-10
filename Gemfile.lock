@@ -123,7 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  gibbon
+  gibbon (= 0.4.1)
   haml
   haml-rails
   jquery-rails
